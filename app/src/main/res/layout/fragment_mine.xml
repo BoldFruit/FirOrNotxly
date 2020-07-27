@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.pullRefreshLayout.QMUIPullRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pull_to_refresh_head">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        tools:context=".business.mine.view.MineFragment">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_mine_user"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/img_default_avatar_background"
+            >
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_cloud"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:id="@+id/img_avatar"
+                app:qmui_border_color="@color/white"
+                app:qmui_border_width="1dp"
+                app:qmui_is_circle="true"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/img_avatar"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/p4"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_name"
+                    android:text="@string/label_mine_name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/p1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_signature"
+                    android:text="这是一条有个性的签名"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/p1"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/p1"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/p1"
+                        android:id="@+id/llayout_follow"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_following"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_default_zero"
+                            android:textColor="@color/white"
+                            android:id="@+id/txt_follow_number"
+                            android:textSize="16sp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/p4"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/p1"
+                        android:id="@+id/llayout_follower"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_follower"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_default_zero"
+                            android:textColor="@color/white"
+                            android:id="@+id/txt_follower_number"
+                            android:textSize="16sp"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:orientation="vertical"
+            android:background="@color/white_none"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lable_my_circle"
+                android:textSize="16sp"
+                android:textColor="#8AA5D5"
+                />
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_my_circle_published"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_menu_publish"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="@string/label_my_circle_published"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_my_circle_liked"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_follow"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="@string/label_my_circle_like"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_my_circle_fit_request"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_fit"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="@string/label_my_circle_fit_request"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_my_circle_my_request"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_request"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="我的请求"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+
+            </LinearLayout>
+
+        </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#F3F3FD"
+            />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:orientation="vertical"
+            android:background="@color/white_none">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_common"
+                android:textSize="16sp"
+                android:textColor="#8AA5D5"
+                android:layout_marginTop="@dimen/p4"
+                />
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_common_edit_profile"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_mylike"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="@string/label_edit_profile"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_common_common_question"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_common_problem"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="@string/label_common_question"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_common_feedback"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_feedback"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="@string/lable_feedback"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:id="@+id/llayout_setting"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_setting"/>
+
+                <TextView
+                    style="@style/MineTextTheme"
+                    android:text="@string/label_setting"
+                    />
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@drawable/ic_right_arraw"/>
+
+            </LinearLayout>
+
+        </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"/>
+
+
+
+    </LinearLayout>
+
+</com.qmuiteam.qmui.widget.pullRefreshLayout.QMUIPullRefreshLayout>

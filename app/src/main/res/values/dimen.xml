@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="p4">16dp</dimen>
+    <dimen name="p2">8dp</dimen>
+    <dimen name="p0_5">2dp</dimen>
+    <dimen name="p1">4dp</dimen>
+    <dimen name="p8">32dp</dimen>
+    <dimen name="p9">40dp</dimen>
+    <dimen name="p10">48dp</dimen>
+    <dimen name="p5">20dp</dimen>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout android:layout_marginTop="@dimen/p4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:qmui_radius="@dimen/p1"
+    android:text="提交"
+    app:qmui_borderWidth="1dp"
+    app:qmui_borderColor="@color/app_main"
+    android:textColor="@color/app_main"
+    android:layout_gravity="center"
+    android:id="@+id/llayout_submit"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_marginLeft="@dimen/p8"
+        android:layout_marginRight="@dimen/p8"
+        android:layout_marginTop="@dimen/p2"
+        android:layout_marginBottom="@dimen/p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提    交"
+        android:textSize="@dimen/p4"
+        android:textColor="@color/app_main"/>
+
+</com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>

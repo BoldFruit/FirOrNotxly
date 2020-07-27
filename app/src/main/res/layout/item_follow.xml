@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="18.33dp"
+    android:layout_marginTop="20dp"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray"
+        />
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/test_sky"
+            app:qmui_is_circle="true"
+            android:id="@+id/img_avatar"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="19dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="这是你的昵称"
+                android:layout_toEndOf="@id/img_avatar"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:id="@+id/txt_avatar"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="6.33dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关注  "
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_follow_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/p4"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="粉丝  "
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/txt_follower_number"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="right">
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="@dimen/p4"
+                android:text="请求搭配"
+                app:qmui_borderColor="@color/yellow_request"
+                android:textColor="@color/yellow_request"
+                android:id="@+id/btn_accept_request"
+                />
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+
+</com.qmuiteam.qmui.layout.QMUILinearLayout>

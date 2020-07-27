@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+    <com.qmuiteam.qmui.widget.QMUINotchConsumeLayout
+        android:id="@+id/not_safe_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/topbar"
+            app:qmui_topbar_bg_color="@color/app_main"
+            />
+
+    </com.qmuiteam.qmui.widget.QMUINotchConsumeLayout>
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUILinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:qmui_radius="@dimen/p1"
+        app:qmui_borderWidth="1dp"
+        app:qmui_borderColor="@color/shadow_black"
+        android:layout_margin="@dimen/p2">
+
+        <TextView
+            android:layout_marginLeft="@dimen/p2"
+            android:layout_marginRight="@dimen/p2"
+            android:layout_marginTop="@dimen/p1"
+            android:layout_marginBottom="@dimen/p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是一个可爱的标签"
+            android:textColor="@color/shadow_black"
+            android:id="@+id/label"
+            />
+
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+
+</com.qmuiteam.qmui.layout.QMUILinearLayout>

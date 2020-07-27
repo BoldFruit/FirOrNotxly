@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/item_topbar"/>
+
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/p4"
+            app:qmui_radius="@dimen/p1"
+            app:qmui_borderColor="@color/white">
+
+            <EditText
+                android:layout_margin="@dimen/p2"
+                android:gravity="left|start"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/edit_detail"
+                android:hint="@string/txt_tip_feedback"
+                android:inputType="textMultiLine"
+                android:textSize="14sp"
+                android:background="@drawable/edit_text_background"
+                />
+
+        </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>
+
+        <include layout="@layout/item_submit"/>
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+
+</com.qmuiteam.qmui.layout.QMUILinearLayout>

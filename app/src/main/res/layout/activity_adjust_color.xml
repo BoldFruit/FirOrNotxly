@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:id="@+id/rlayout_header"
+        android:background="@color/fitting_toolbar_blue"
+        android:gravity="center_vertical"
+        android:padding="2dp"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_fitting_left_arraw"
+            android:scaleType="fitCenter"
+            android:id="@+id/img_return_color"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="调色"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:scaleType="fitCenter"
+            android:id="@+id/img_pull_up"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_yes"
+            android:id="@+id/img_yes_color"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="4dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="12dp"
+                                        app:contentPadding="4dp"
+                                        android:layout_margin="4dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4.6"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/image1"
+                    android:scaleType="centerCrop"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="54dp"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text="色调"
+                        android:textSize="16sp"
+                        />
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:thumb="@drawable/seekbar_thumb"
+                        android:thumbOffset="-1dp"
+                        android:progressDrawable="@drawable/seekbar_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="54dp"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text="饱和度"
+                        android:textSize="16sp"
+                        />
+                    <SeekBar
+                        android:id="@+id/seekBar1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:thumb="@drawable/seekbar_thumb"
+                        android:thumbOffset="-1dp"
+                        android:progressDrawable="@drawable/seekbar_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="54dp"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text="亮度"
+                        android:textSize="16sp"
+                        />
+                    <SeekBar
+
+                        android:id="@+id/seekBar2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:thumb="@drawable/seekbar_thumb"
+                        android:thumbOffset="-1dp"
+                        android:progressDrawable="@drawable/seekbar_background"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+

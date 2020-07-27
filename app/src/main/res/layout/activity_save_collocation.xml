@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/fitting_toolbar_blue"
+        android:padding="4dp"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_fitting_left_arraw"
+            android:layout_marginStart="4dp"
+            android:id="@+id/img_return_collocation"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lable_collocate_detail"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:id="@+id/txt_collocation_detail"/>
+
+        <ImageView
+            android:id="@+id/img_delete_suit"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/delete_clothes"
+            android:visibility="gone"/>/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp"
+        android:visibility="gone"
+        android:id="@+id/card_view_collocation">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:id="@+id/img_show"/>
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.28"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="32dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom">
+
+                <TextView
+                    android:text="搭配名称:"
+                    android:id="@+id/txt_collocation_name"
+                    style="@style/SaveCollocationTextStyle"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:id="@+id/edit_collocation_name"
+                    android:gravity="center"
+                    android:drawableBottom="@color/light_gray"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom">
+
+                <TextView
+                    android:text="搭配分类:"
+                    android:id="@+id/txt_collocation_classfy"
+                    style="@style/SaveCollocationTextStyle"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/data"
+                    android:id="@+id/spin_category"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:text="@string/lable_add_lable"
+                    android:id="@+id/txt_add_lables"
+                    style="@style/SaveCollocationTextStyle"
+                    />
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/flayout_lable_content"
+                    app:tag_gravity="center">
+                </com.zhy.view.flowlayout.TagFlowLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="场景"
+                />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/glayout_location"
+                app:tag_gravity="left">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="风格"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/glayout_style"
+                app:tag_gravity="left">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="@string/lable_season"
+                />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/glayout_season"
+                app:tag_gravity="left">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="备注"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:id="@+id/edit_remarks"
+                android:drawableBottom="@color/light_gray"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.3">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_save_collocation"
+                android:layout_centerInParent="true"
+                android:id="@+id/img_save_collocation"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

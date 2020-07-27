@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/fitting_toolbar_blue"
+        android:padding="4dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_fitting_left_arraw"
+            android:layout_marginStart="4dp"
+            android:id="@+id/img_return_fitting"
+            />
+
+        <ImageView
+            android:id="@+id/img_delete_clothes"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/delete_clothes"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="4dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:id="@+id/img_show_clothes"/>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.28"
+        android:padding="4dp"
+        android:background="@color/tlayout_gray"
+        android:orientation="vertical"
+       >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:gravity="center_vertical">
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="搭配名称："
+            android:textStyle="bold"
+            />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:id="@+id/edit_brand"
+                android:gravity="center"
+                android:drawableBottom="@color/light_gray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="搭配分类："
+                android:textStyle="bold"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/data"
+                android:id="@+id/spin_class"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="添加标签:"
+                android:textStyle="bold"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent">
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/flayout_lable_content"
+                    app:tag_gravity="center">
+                </com.zhy.view.flowlayout.TagFlowLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/light_gray"
+                    android:layout_below="@id/flayout_lable_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.2"
+            >
+            <TextView
+                style="@style/ClassfyTextTheme"
+                android:text="场景"
+                />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/flayout_lable_location"
+                app:tag_gravity="left">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.6"
+            >
+            <TextView
+                style="@style/ClassfyTextTheme"
+                android:text="风格"
+                />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/flayout_lable_style"
+                app:tag_gravity="left">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                style="@style/ClassfyTextTheme"
+                android:text="季节"
+                />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/flayout_lable_season"
+                app:tag_gravity="left">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/ClassfyTextTheme"
+                android:text="备注："
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:id="@+id/edit_content"
+                android:gravity="center"
+                android:drawableBottom="@color/light_gray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.1"
+            android:gravity="center"
+            >
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:qmui_radius="@dimen/p1"
+                app:qmui_borderWidth="1dp"
+                app:qmui_borderColor="@color/app_main"
+                android:textColor="@color/app_main"
+                android:id="@+id/llayout_submit"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_marginLeft="@dimen/p8"
+                    android:layout_marginRight="@dimen/p8"
+                    android:layout_marginTop="@dimen/p2"
+                    android:layout_marginBottom="@dimen/p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发   布"
+                    android:textSize="@dimen/p4"
+                    android:textColor="@color/app_main"/>
+
+            </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:qmui_radius="@dimen/p1"
+            app:qmui_borderWidth="1dp"
+            app:qmui_borderColor="@color/app_main"
+            android:textColor="@color/app_main"
+            android:layout_marginLeft="@dimen/p4"
+            android:id="@+id/llayout_save"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            >
+
+                <TextView
+                    android:layout_marginLeft="@dimen/p8"
+                    android:layout_marginRight="@dimen/p8"
+                    android:layout_marginTop="@dimen/p2"
+                    android:layout_marginBottom="@dimen/p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保   存"
+                    android:textSize="@dimen/p4"
+                    android:textColor="@color/app_main"/>
+
+            </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

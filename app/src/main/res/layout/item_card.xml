@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main"
+    android:id="@+id/qll_card"
+    app:qmui_borderColor="@color/black"
+    app:qmui_borderWidth="1px"
+    app:qmui_radius="@dimen/p8">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:id="@+id/img_circle_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/test_sky"
+            app:qmui_corner_radius="@dimen/p8"/>
+
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:layout_margin="@dimen/p4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llayout_card_header_info"
+            android:padding="@dimen/p2">
+
+<!--            <LinearLayout-->
+<!--                android:layout_marginTop="@dimen/p2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="发布圈子标题"-->
+<!--                    android:id="@+id/txt_circle_title"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:gravity="center"-->
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    android:id="@+id/txt_circle_name"
+                    />
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:layout_marginLeft="@dimen/p2"
+                    android:layout_width="69dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btn_circle_follow"
+                    android:text="关注"
+                    app:qmui_backgroundColor="@color/white"
+                    android:textColor="@color/app_main"
+                    app:qmui_borderColor="@color/app_main"
+                    app:qmui_radius="@dimen/p2"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#发布圈子标题"
+                    android:id="@+id/txt_circle_title"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/p4"
+            >
+
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_comment"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_circle_comment"
+                android:padding="@dimen/p1"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_dislike"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_circle_dislike"
+                android:layout_marginBottom="@dimen/p8"
+                android:padding="@dimen/p1"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_like"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_circle_like"
+                android:layout_marginBottom="@dimen/p8"
+                android:padding="@dimen/p1"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_detail"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_circle_detail"
+                android:padding="@dimen/p1"
+                android:layout_weight="1"
+                />
+
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>

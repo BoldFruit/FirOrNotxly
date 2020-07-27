@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/fitting_toolbar_blue"
+        android:padding="4dp"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_fitting_left_arraw"
+            android:layout_marginStart="4dp"
+            android:id="@+id/img_back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_publish_circle"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_publish"
+            android:id="@+id/img_publish"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+         >
+
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="添加标签："/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/flayout_selected_lable"
+                app:tag_gravity="center"></com.zhy.view.flowlayout.TagFlowLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="场景"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/flayout_lable_location"
+                app:tag_gravity="left"></com.zhy.view.flowlayout.TagFlowLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="风格"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/flayout_lable_style"
+                app:tag_gravity="left">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/SaveCollocationTextStyle"
+                android:text="季节"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/flayout_lable_season"
+                app:tag_gravity="left">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+        </LinearLayout>
+
+
+        <EditText
+            android:paddingStart="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rectangle_round_edit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.9"
+            android:textSize="16sp"
+            android:hint="@string/hind_thinking"
+            android:gravity="top"
+            android:id="@+id/edit_content"/>
+    </LinearLayout>
+</LinearLayout>

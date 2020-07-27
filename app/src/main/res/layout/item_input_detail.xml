@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:qmui_radius="@dimen/p1"
+    android:background="@color/white">
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:qmui_radius="@dimen/p1"
+        >
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/p4"
+        app:qmui_radius="@dimen/p0_5"
+        app:qmui_borderColor="@color/white">
+
+        <EditText
+            android:gravity="left|start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/edit_detail"
+            android:hint="描述..."
+            android:background="@drawable/edit_text_background"
+            android:inputType="textMultiLine"
+            />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="发布请求"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/p4"
+        android:layout_marginBottom="@dimen/p4"
+        app:qmui_borderColor="@color/app_main"
+        android:textColor="@color/app_main"
+        app:qmui_radius="@dimen/p1"
+        android:id="@+id/btn_pulish_request"
+        />
+
+
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>
+
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+</LinearLayout>

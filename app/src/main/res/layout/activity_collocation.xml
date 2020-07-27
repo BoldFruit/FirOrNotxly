@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/flayout_container"
+     >
+    </FrameLayout>
+
+    <com.yinglan.scrolllayout.ScrollLayout
+        android:id="@+id/scroll_down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:scrollbarThumbVertical="@color/gray">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:id="@+id/rlayout_header"
+                android:background="@color/light_blue_70alpha"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_fitting_left_arraw"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/img_return"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_pull_up"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/img_pull_up"
+                    android:layout_centerInParent="true"
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_yes"
+                    android:id="@+id/img_yes"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:id="@+id/tlayout_clothes_type"
+                app:tabMode="fixed"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/fitting_toolbar_blue"
+                app:tabIndicatorFullWidth="false"
+                app:tabBackground="@color/white"
+                >
+            </android.support.design.widget.TabLayout>
+
+            <com.yinglan.scrolllayout.content.ContentRecyclerView
+                android:background="@color/white"
+                android:id="@+id/recyclerview_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbarThumbHorizontal="@color/light_gray"
+                />
+        </LinearLayout>
+    </com.yinglan.scrolllayout.ScrollLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rgroup_operate"
+        android:background="@drawable/rectangle_round_white"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+        
+        <RadioButton
+            style="@style/tab_menu_item"
+            android:id="@+id/rbtn_restart_collocate"
+            android:text="@string/lable_restart_collocate"
+            android:drawableTop="@mipmap/ic_restart_collocate"
+        />
+
+        <RadioButton
+            style="@style/tab_menu_item"
+            android:id="@+id/rbtn_save_collocate"
+            android:text="@string/ic_save_collocation"
+            android:drawableTop="@mipmap/ic_save_collocation"
+            />
+
+        <RadioButton
+            style="@style/tab_menu_item"
+            android:id="@+id/rbtn_share_to_friend"
+            android:text="@string/lable_share_friend"
+            android:drawableTop="@mipmap/ic_share_to_friend"
+            />
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_change_location"
+        android:id="@+id/img_change_background"
+        android:layout_above="@id/rgroup_operate"
+        android:layout_alignEnd="@id/rgroup_operate"
+        android:visibility="invisible"/>
+
+
+    <LinearLayout
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:id="@+id/llayout_item_opetator"
+        android:visibility="gone"
+        android:layout_margin="8dp"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_delete_item"
+            android:id="@+id/img_delete_item"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_up"
+            android:id="@+id/img_up_item"
+            android:layout_marginTop="20dp"
+
+           />
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_down"
+            android:id="@+id/img_down_item"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

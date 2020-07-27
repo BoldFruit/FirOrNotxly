@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_topbar"/>
+
+    <com.qmuiteam.qmui.widget.pullRefreshLayout.QMUIPullRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/qprlayout_refresh">
+
+    <com.qmuiteam.qmui.nestedScroll.QMUIContinuousNestedScrollLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/slayout_nested"
+        >
+    </com.qmuiteam.qmui.nestedScroll.QMUIContinuousNestedScrollLayout>
+
+    </com.qmuiteam.qmui.widget.pullRefreshLayout.QMUIPullRefreshLayout>
+</com.qmuiteam.qmui.layout.QMUILinearLayout>

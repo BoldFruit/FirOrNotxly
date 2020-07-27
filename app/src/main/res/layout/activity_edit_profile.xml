@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUILinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_topbar"/>
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/p4"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@mipmap/ic_avatar"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/p2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="头像"
+                    android:textColor="@color/shadow_black"
+                    android:textSize="14sp"
+                    />
+
+                <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                    android:layout_marginStart="@dimen/p4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_cloud"
+                    android:id="@+id/img_edit_avatar"
+                    app:qmui_is_circle="true"
+                    app:qmui_border_color="@color/black"
+                    app:qmui_border_width="1dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="@dimen/p1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shadow_black"
+                />
+
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:divider="@drawable/divider"
+                android:showDividers="end"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@mipmap/ic_nickname"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/p2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="昵称"
+                    android:textColor="@color/shadow_black"
+                    android:textSize="14sp"
+                    />
+
+                <EditText
+                    android:layout_marginStart="@dimen/p4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:id="@+id/edit_edit_nickname"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="@dimen/p1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shadow_black"
+                />
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:divider="@drawable/divider"
+                android:showDividers="end"
+                >
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@mipmap/ic_nickname"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/p2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="性别"
+                    android:textColor="@color/shadow_black"
+                    android:textSize="14sp"
+                    />
+
+                <EditText
+                    android:layout_marginStart="@dimen/p4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:id="@+id/edit_edit_sex"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="@dimen/p1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shadow_black"
+                />
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:divider="@drawable/divider"
+                android:showDividers="end">
+
+                <ImageView
+                    style="@style/MineImageTheme"
+                    android:src="@mipmap/ic_nickname"/>
+
+                <TextView
+                    android:layout_marginStart="@dimen/p2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="年龄"
+                    android:textColor="@color/shadow_black"
+                    android:textSize="14sp"
+                    />
+
+                <EditText
+                    android:layout_marginStart="@dimen/p4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:id="@+id/edit_edit_age"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="@dimen/p1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shadow_black"
+                />
+            <LinearLayout
+                style="@style/llayoutTheme"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:divider="@drawable/divider"
+                android:showDividers="end"
+                >
+
+                <LinearLayout
+                    style="@style/llayoutTheme"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:showDividers="end"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        style="@style/MineImageTheme"
+                        android:src="@mipmap/ic_nickname"/>
+
+                    <TextView
+                        android:layout_marginStart="@dimen/p2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="身高"
+                        android:textColor="@color/shadow_black"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:layout_marginStart="@dimen/p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:textColor="@color/black"
+                        android:id="@+id/edit_edit_height"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/llayoutTheme"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:showDividers="end"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        style="@style/MineImageTheme"
+                        android:src="@mipmap/ic_nickname"/>
+
+                    <TextView
+                        android:layout_marginStart="@dimen/p2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="体重"
+                        android:textColor="@color/shadow_black"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:layout_marginStart="@dimen/p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:textColor="@color/black"
+                        android:id="@+id/edit_edit_weight"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="@dimen/p1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shadow_black"
+                />
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+        
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:qmui_radius="@dimen/p1"
+            app:qmui_borderColor="@color/white"
+            android:background="@drawable/edit_text_background"
+            android:layout_margin="@dimen/p4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人简介"
+                android:textColor="@color/shadow_black"
+                android:textSize="@dimen/p4"/>
+            <EditText
+                android:gravity="left|start"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/edit_edit_detail"
+                android:hint="简介不能超过42个字"
+                android:inputType="textMultiLine"
+                android:textSize="14sp"
+                android:background="@null"
+                />
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+        <include layout="@layout/item_submit"/>
+
+
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+</com.qmuiteam.qmui.layout.QMUILinearLayout>

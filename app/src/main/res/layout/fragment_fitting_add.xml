@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:text="@string/label_main_hint"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src= "@drawable/ic_add_picture"
+            />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="@string/btn_add_pic"
+            android:layout_marginStart="@dimen/p4"
+            android:textSize="16sp"
+            android:id="@+id/btn_add_pic"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src= "@drawable/ic_take_photo"
+            />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="@string/btn_take_pic"
+            android:layout_marginStart="@dimen/p4"
+            android:textSize="16sp"
+            android:id="@+id/btn_take_photo"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

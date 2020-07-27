@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="120dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+        style="@style/tab_fitting_choose"
+        android:id="@+id/txt_decorator"
+        android:text="@string/tab_decorator"/>
+
+        <TextView
+            style="@style/tab_fitting_choose"
+            android:id="@+id/txt_cloth"
+            android:text="@string/tab_cloth"/>
+
+        <TextView
+            style="@style/tab_fitting_choose"
+            android:id="@+id/txt_trousers"
+            android:text="@string/tab_trousers"/>
+
+        <TextView
+            style="@style/tab_fitting_choose"
+            android:id="@+id/txt_shoes"
+            android:text="@string/tab_shoes"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_fitting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

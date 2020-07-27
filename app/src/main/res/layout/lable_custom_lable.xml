@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:layout_marginEnd="5dp"
+              android:layout_marginBottom="5dp"
+              android:layout_marginStart="5dp"
+              android:background="@drawable/rectangle_round_shadow">
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_add_lable"
+        />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="2dp"
+              android:textColor="@drawable/bg_lable_text"
+              android:text="@string/lable_custom_lable">
+
+    </TextView>
+</LinearLayout>

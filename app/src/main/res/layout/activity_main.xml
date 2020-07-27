@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_main"
+                android:fitsSystemWindows="true"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/rectangle_round_gray"
+        android:id="@+id/group_tab_menu"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_fitting"
+            android:text="@string/tab_menu_fittingroom"
+            android:drawableTop="@drawable/tab_menu_fitting"
+            style="@style/tab_menu_item"/>
+
+        <RadioButton
+            android:id="@+id/rb_clothes"
+            android:text="@string/tab_menu_clothes"
+            android:drawableTop="@drawable/tab_menu_clothes"
+            style="@style/tab_menu_item"/>
+
+        <RadioButton
+            android:id="@+id/rb_circle"
+            android:text="@string/tab_menu_circle"
+            android:drawableTop="@mipmap/ic_new_circle"
+            style="@style/tab_menu_item"/>
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            android:text="@string/tab_menu_mine"
+            android:drawableTop="@mipmap/ic_new_mine"
+            style="@style/tab_menu_item"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/group_tab_menu"
+        android:id="@+id/flayout_content"></FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

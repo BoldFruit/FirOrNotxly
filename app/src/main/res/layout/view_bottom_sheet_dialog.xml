@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_round_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="@string/btn_chage_avatar"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/txt_change_avatar"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="@string/btn_cancel"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/txt_cancel_change"/>
+</LinearLayout>

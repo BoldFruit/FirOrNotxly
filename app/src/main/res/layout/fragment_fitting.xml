@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:id="@+id/llayout_fitting"
+              >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/title_name"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fitsSystemWindows="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="52dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_txt_main"
+            android:gravity="center"
+            android:minLines="2"
+            android:text="@string/label_save"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="52dp"
+            android:layout_height="64dp"
+            android:layout_above="@id/btn_save"
+            android:layout_alignStart="@id/btn_save"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_txt_main"
+            android:minLines="2"
+            android:text="@string/label_main_share"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="52dp"
+            android:layout_height="64dp"
+            android:layout_above="@id/btn_share"
+            android:layout_alignStart="@id/btn_share"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_txt_main"
+            android:minLines="2"
+            android:text="继续添加"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="52dp"
+            android:layout_height="match_parent"
+            android:id="@+id/rlayout_fitting_room">
+
+            <com.neuqer.fitornot.widget.DragScaleImage2
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:layout_width="120dp"
+                android:focusable="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/p5"
+                android:id="@+id/img_decorator"
+                />
+
+            <com.neuqer.fitornot.widget.DragScaleView
+                style="@style/clothesTheme"
+                android:src="@drawable/ic_origin_cloth"
+                android:id="@+id/img_cloth"
+                android:layout_below="@id/img_decorator"/>
+
+            <com.neuqer.fitornot.widget.DragScaleView
+                style="@style/clothesTheme"
+                android:id="@+id/img_trousers"
+                android:layout_below="@id/img_cloth"
+                android:src="@drawable/ic_origin_trousers"/>
+
+            <com.neuqer.fitornot.widget.DragScaleView
+                style="@style/clothesTheme"
+                android:src="@drawable/ic_origin_shoes"
+                android:id="@+id/img_shoes"
+                android:layout_below="@id/img_trousers"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/fragment_bottom">
+    </FrameLayout>
+</LinearLayout>

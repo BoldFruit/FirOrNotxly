@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUIFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/white"
+    tools:targetApi="lollipop"
+    android:layout_margin="@dimen/p4"
+    android:id="@+id/flayout_my_published">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="我的发布"
+        android:gravity="center"
+        android:id="@+id/img_my_published"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textSize="14sp"
+        android:id="@+id/txt_my_published"
+        android:maxEms="10"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_margin="@dimen/p4"
+        />
+
+</com.qmuiteam.qmui.layout.QMUIFrameLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:divider="@drawable/divider"
+    android:showDividers="end"
+    >
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/test_sky"
+            app:qmui_is_circle="true"
+            android:id="@+id/img_avatar"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="这是你的昵称"
+            android:layout_toEndOf="@id/img_avatar"
+            android:layout_marginStart="19dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:id="@+id/txt_avatar"
+            />
+
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical">
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:layout_width="72dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="18.33dp"
+                android:text="请求中"
+                app:qmui_borderColor="@color/app_main"
+                android:textColor="@color/app_main"
+                android:gravity="center"
+                android:id="@+id/btn_request_status"
+                />
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.67dp"
+        android:layout_marginStart="20dp"
+        >
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_pencil_edit"
+             />
+        <TextView
+            android:gravity="center"
+            android:layout_marginStart="@dimen/p1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="请求描述："
+            android:textColor="#C7776A"
+            />
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="18.33dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginTop="3.33dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这是请求描述"
+            android:id="@+id/txt_fit_request_description"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/btn_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_request_detail"
+            android:layout_weight="14"
+
+            />
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+</com.qmuiteam.qmui.layout.QMUILinearLayout>
